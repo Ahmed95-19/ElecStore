@@ -1,0 +1,158 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+header {
+    display: flex;
+    width: 85%;
+    margin: auto;
+    height: 10vh;
+    align-items: center;
+}
+.logo-container, .nav-links, .cart {
+    display: flex;
+}
+.logo-container {
+    flex: 1;
+}
+.logotext {
+    font-weight: 800;
+    margin: 5px;
+}
+nav {
+    flex: 2;
+}
+.nav-links {
+    justify-content: space-around;
+    list-style-type: none;
+}
+.nav-link a {
+    color: black;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 16px;
+}
+.nav-link a:hover {
+    color: chocolate;
+}
+
+.cart {
+    flex: 1;
+    justify-content: flex-end;
+}
+.presentation {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    min-height: 80vh;
+    align-items: center;
+}
+.introduction {
+    flex: 1;
+}
+.intro-text h1 {
+    font-size: 46px;
+    font-weight: 500;
+    background: linear-gradient(to right, #494964, rgb(96, 96, 245));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.intro-text p {
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 5px;
+    color: #585772;
+}
+.cta {
+    padding: 50px 0px 0px 0px;
+}
+.cta-select {
+    border: 2px solid rgb(0, 0, 0);
+    background: transparent;
+    color: #000000;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 350;
+    font-size: 18px;
+}
+.cta-add {
+    border: 2px solid rgb(0, 0, 0);
+    background: rgb(0, 0, 0);;
+    color: #ffffff;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 350;
+    font-size: 18px;
+    margin: 15px 0px 0px 15px;
+}
+.cta-add:hover {
+    background-color: white;
+    color: black;
+}
+.cover {
+    flex: 1;
+}
+.cover img {
+    height: 60vh;
+    filter: drop-shadow(0px 30px 12px black);
+    animation: drop 2.5s infinite;
+}
+.big-circle {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+    opacity: 0.5;
+    height: 70%;
+}
+.mid-circle {
+    position: absolute;
+    top: 30%;
+    right: 30%;
+    z-index: -1;
+    opacity: 0.7;
+    height: 60%;
+}
+.small-circle {
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    z-index: -1;
+    opacity: 0.8;
+}
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@media screen and (max-width: 1024px) {
+    .presentation {
+        flex-direction: column;
+    }
+    .introduction {
+        margin: 7vh;
+        text-align: center;
+    }
+    .intro-text h1 {
+        font-size: 30px;
+    }
+    .intro-text p {
+        font-size: 18px;
+    }
+    .cta {
+        padding: 10px 0px 0px 0px;
+    }
+}
