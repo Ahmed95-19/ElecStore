@@ -19,9 +19,10 @@ header {
 .logo-container {
     flex: 1;
 }
+
 .logotext {
     font-weight: 800;
-    margin: 5px;
+    margin: 15px;
 }
 nav {
     flex: 2;
@@ -37,7 +38,7 @@ nav {
     font-size: 16px;
 }
 .nav-link a:hover {
-    color: chocolate;
+    color: cornflowerblue;
 }
 
 .cart {
@@ -55,13 +56,19 @@ nav {
     flex: 1;
 }
 .intro-text h1 {
-    font-size: 46px;
+    font-size: 55px;
     font-weight: 500;
     background: linear-gradient(to right, #494964, rgb(96, 96, 245));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.intro-text p {
+/*.intro-text p {
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 5px;
+    color: #585772;
+}*/
+.intro-text .iphone {
     font-size: 20px;
     font-weight: 300;
     margin-top: 5px;
@@ -70,7 +77,7 @@ nav {
 .cta {
     padding: 50px 0px 0px 0px;
 }
-.cta-select {
+/*cta-select {
     border: 2px solid rgb(0, 0, 0);
     background: transparent;
     color: #000000;
@@ -80,6 +87,22 @@ nav {
     font-family: 'Poppins', sans-serif;
     font-weight: 350;
     font-size: 18px;
+}*/
+.cta-storage {
+    border: 2px solid rgb(0, 0, 0);
+    background: transparent;
+    color: #000000;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-family: 'PLexend Deca', sans-serif;
+    font-weight: 350;
+    font-size: 18px;
+    outline: #ffffff;
+}
+.cta-storage:hover {
+    background: linear-gradient(to right, #494964, rgb(96, 96, 245));
+    color: white;
 }
 .cta-add {
     border: 2px solid rgb(0, 0, 0);
@@ -88,10 +111,11 @@ nav {
     width: 150px;
     height: 50px;
     cursor: pointer;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
     font-weight: 350;
     font-size: 18px;
     margin: 15px 0px 0px 15px;
+    outline: #ffffff;
 }
 .cta-add:hover {
     background-color: white;
@@ -102,15 +126,32 @@ nav {
 }
 .cover img {
     height: 60vh;
-    filter: drop-shadow(0px 30px 12px black);
-    animation: drop 2.5s infinite;
+    filter: drop-shadow(0px 40px 18px black);
+    animation: drop 5.5s infinite;
+}
+.covertwo {
+    flex: -1;
+}
+.covertwo img {
+    height: 60vh;
+    animation: swipe 5s infinite;
+}
+@keyframes swipe {
+    0% {
+        opacity: 0.1;
+        transform: translateX(-115px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 .big-circle {
     position: absolute;
     top: 0px;
     right: 0px;
     z-index: -1;
-    opacity: 0.5;
+    opacity: 0.1;
     height: 70%;
 }
 .mid-circle {
@@ -118,15 +159,8 @@ nav {
     top: 30%;
     right: 30%;
     z-index: -1;
-    opacity: 0.7;
+    opacity: 0.2;
     height: 60%;
-}
-.small-circle {
-    position: absolute;
-    bottom: 0;
-    left: 15%;
-    z-index: -1;
-    opacity: 0.8;
 }
 @keyframes drop {
     0% {
@@ -138,6 +172,7 @@ nav {
         transform: translateY(0px);
     }
 }
+/*============== Media =================*/
 @media screen and (max-width: 1024px) {
     .presentation {
         flex-direction: column;
@@ -155,4 +190,55 @@ nav {
     .cta {
         padding: 10px 0px 0px 0px;
     }
+    .big-circle {
+        opacity: 0.5;
+    }
+    .mid-circle {
+        opacity: 0.4;
+    }
+    .small-circle {
+        opacity: 0.5;
+    }
 }
+@media only screen 
+    and (max-width : 375px) 
+    and (max-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) {
+        .presentation {
+            flex-direction: column;
+        }
+        .nav-links {
+            flex-direction: column;
+        }
+        .nav-links a {
+            margin-left: 15px;
+        }
+        .cta-select {
+            margin-left: 15px;
+        }
+        .big-circle {
+            opacity: 0.5;
+        }
+        .mid-circle {
+            opacity: 0.4;
+        }
+        .small-circle {
+            opacity: 0.5;
+        }
+        .cta-storage {
+            margin: 5px;
+        }
+        .cta-add {
+            margin: 0px 0px 0px 3px;
+        }
+        .introduction {
+            text-align: center;
+        }
+        .intro-text .iphone{
+            font-size: 20px;
+                }
+                .intro-text p {
+                    font-size: 17px;
+                }
+    }
+    /*============== Media =================*/
