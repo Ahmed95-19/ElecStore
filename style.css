@@ -8,10 +8,16 @@ body {
 }
 header {
     display: flex;
-    width: 85%;
+    width: 95%;
     margin: auto;
     height: 10vh;
     align-items: center;
+}
+.span {
+    font-family: 'Poppins',sans-serif;
+    font-size: 27px;
+    font-weight: bold;
+    color: #000000;
 }
 .logo-container, .nav-links, .cart {
     display: flex;
@@ -35,7 +41,7 @@ nav {
     color: black;
     text-decoration: none;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 19px;
 }
 .nav-link a:hover {
     color: cornflowerblue;
@@ -62,14 +68,8 @@ nav {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-/*.intro-text p {
-    font-size: 20px;
-    font-weight: 300;
-    margin-top: 5px;
-    color: #585772;
-}*/
 .intro-text .iphone {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
     margin-top: 5px;
     color: #585772;
@@ -77,17 +77,6 @@ nav {
 .cta {
     padding: 50px 0px 0px 0px;
 }
-/*cta-select {
-    border: 2px solid rgb(0, 0, 0);
-    background: transparent;
-    color: #000000;
-    width: 150px;
-    height: 50px;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 350;
-    font-size: 18px;
-}*/
 .cta-storage {
     border: 2px solid rgb(0, 0, 0);
     background: transparent;
@@ -99,6 +88,7 @@ nav {
     font-weight: 350;
     font-size: 18px;
     outline: #ffffff;
+    margin: 15px 0px 0px 6px;
 }
 .cta-storage:hover {
     background: linear-gradient(to right, #494964, rgb(96, 96, 245));
@@ -108,14 +98,22 @@ nav {
     border: 2px solid rgb(0, 0, 0);
     background: rgb(0, 0, 0);;
     color: #ffffff;
-    width: 150px;
-    height: 50px;
+    width: 180px;
+    height: 60px;
     cursor: pointer;
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 350;
     font-size: 18px;
-    margin: 15px 0px 0px 15px;
+    margin: 15px 0px 0px 24px;
     outline: #ffffff;
+}
+.cta-add::after {
+    content: '+';
+    color: #000000;
+    width: 50px;
+    height: 30px;
+    padding: 5px;
+    font-weight: bolder;
 }
 .cta-add:hover {
     background-color: white;
@@ -138,12 +136,12 @@ nav {
 }
 @keyframes swipe {
     0% {
-        opacity: 0.1;
-        transform: translateX(-115px);
+        opacity: 0;
+        transform: translateY(-115px);
     }
     100% {
         opacity: 1;
-        transform: translateX(0px);
+        transform: translateX(80px);
     }
 }
 .big-circle {
@@ -200,7 +198,7 @@ nav {
         opacity: 0.5;
     }
 }
-@media only screen 
+@media only screen /*iPhone X*/
     and (max-width : 375px) 
     and (max-height : 812px) 
     and (-webkit-device-pixel-ratio : 3) {
@@ -226,7 +224,8 @@ nav {
             opacity: 0.5;
         }
         .cta-storage {
-            margin: 5px;
+            margin: 5px;  
+            word-wrap: break-word;
         }
         .cta-add {
             margin: 0px 0px 0px 3px;
@@ -239,6 +238,9 @@ nav {
                 }
                 .intro-text p {
                     font-size: 17px;
+                }
+                .cover img {
+                    justify-content: center;
                 }
     }
     /*============== Media =================*/
